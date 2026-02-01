@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="الشركة الوطنية للصرافة والخدمات المالية المساهمة - خدمات صرافة ومالية احترافية منذ 2013">
+    <meta name="keywords" content="صرافة ليبيا, خدمات مالية, تحويلات مالية, أسعار العملات, الزاوية">
+    <meta name="author" content="الشركة الوطنية للصرافة والخدمات المالية">
+    <title>الشركة الوطنية للصرافة والخدمات المالية المساهمة</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+    
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="شعار الشركة الوطنية للصرافة" id="company-logo">
+                    </div>
+                    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="قائمة التنقل">
+                        <i class="fas fa-bars"></i>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="#home" class="nav-link active">الرئيسية</a></li>
+                        <li><a href="#about" class="nav-link">من نحن</a></li>
+                        <li><a href="#services" class="nav-link">خدماتنا</a></li>
+                        <li><a href="#rates" class="nav-link">العملات</a></li>
+                        <li><a href="#why-us" class="nav-link">لماذا نحن</a></li>
+                        <li><a href="#contact" class="nav-link">اتصل بنا</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-slideshow">
+            <div class="hero-slide active" style="background-image: url('images/IMG_7268.JPG');">
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="hero-slide" style="background-image: url('images/IMG_7269.JPG');">
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="hero-slide" style="background-image: url('images/IMG_7270.JPG');">
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="hero-slide" style="background-image: url('images/IMG_7271.JPG');">
+                <div class="slide-overlay"></div>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <img src="images/logo.png" alt="شعار الشركة الوطنية للصرافة">
+                </div>
+                <h1 class="hero-title">الشركة الوطنية للصرافة<br>والخدمات المالية المساهمة</h1>
+                <p class="hero-subtitle">شركتك الموثوقة للخدمات المالية والصرافة منذ 2013</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">تواصل معنا</a>
+                    <a href="#services" class="btn btn-secondary">خدماتنا</a>
+                    <a href="#rates" class="btn btn-outline">العملات</a>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation Arrows -->
+        <button class="hero-nav hero-nav-prev" id="hero-prev" aria-label="الصورة السابقة">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <button class="hero-nav hero-nav-next" id="hero-next" aria-label="الصورة التالية">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <!-- Slide Indicators -->
+        <div class="hero-indicators" id="hero-indicators">
+            <button class="hero-indicator active" data-slide="0" aria-label="الصورة 1"></button>
+            <button class="hero-indicator" data-slide="1" aria-label="الصورة 2"></button>
+            <button class="hero-indicator" data-slide="2" aria-label="الصورة 3"></button>
+            <button class="hero-indicator" data-slide="3" aria-label="الصورة 4"></button>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">من نحن</h2>
+                <p class="section-subtitle">شركة رائدة في مجال الصرافة والخدمات المالية</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-badge">
+                        <span class="year">2013</span>
+                        <span class="label">سنة التأسيس</span>
+                    </div>
+                    <p class="about-description">
+                        تأسست <strong>الشركة الوطنية للصرافة والخدمات المالية المساهمة</strong> في عام 2013، 
+                        وتُعد من أوائل شركات الصرافة في ليبيا. نحن شركة رائدة في مجال الصرافة والخدمات المالية، 
+                        ملتزمون بتقديم خدمات متميزة لعملائنا الكرام.
+                    </p>
+                    <p class="about-description">
+                        نحن نعمل بكل شفافية ومهنية لبناء علاقات طويلة الأمد مع عملائنا، 
+                        مما يضمن أعلى معايير الأمان والشفافية في جميع معاملاتنا.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="images/IMG_7273.JPG" alt="مكتب الشركة الوطنية للصرافة">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">خدماتنا</h2>
+                <p class="section-subtitle">خدمات مالية شاملة واحترافية</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3 class="service-title">بيع وشراء العملات الأجنبية</h3>
+                    <p class="service-description">
+                        نقدم خدمات بيع وشراء جميع العملات الأجنبية الرئيسية بأسعار تنافسية وشفافة.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3 class="service-title">خدمات مخصصات الأغراض الشخصية</h3>
+                    <p class="service-description">
+                        خدمات مالية مخصصة لتلبية احتياجاتك الشخصية وفقًا للضوابط المعمول بها.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="service-title">التحويلات المالية داخل وخارج البلاد</h3>
+                    <p class="service-description">
+                        تحويلات مالية آمنة وسريعة داخل ليبيا وخارجها عبر شبكة موثوقة من الشركاء.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="service-title">التحويلات السريعة</h3>
+                    <p class="service-description">
+                        خدمة تحويلات فورية لضمان وصول أموالك في أسرع وقت ممكن.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="service-title">الخدمات المالية المصرح بها</h3>
+                    <p class="service-description">
+                        جميع خدماتنا تتم وفقًا للقوانين والضوابط المصرح بها ومعتمدة من مصرف ليبيا المركزي.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-logo">
+                        <img src="images/moneygram-logo.png" alt="شعار MoneyGram" class="service-logo-img">
+                    </div>
+                    <h3 class="service-title">التحويل عبر MoneyGram</h3>
+                    <p class="service-description">
+                        خدمة تحويلات مالية دولية سريعة وآمنة عبر شبكة MoneyGram العالمية.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exchange Rates Section -->
+    <section class="rates" id="rates">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">العملات المتاحة</h2>
+                <p class="section-subtitle">نقدم خدمات بيع وشراء العملات الأجنبية التالية</p>
+            </div>
+            <div class="rates-table-wrapper">
+                <table class="rates-table">
+                    <thead>
+                        <tr>
+                            <th>العملة</th>
+                            <th>الرمز</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rates-tbody">
+                        <tr>
+                            <td>
+                                <div class="currency-info">
+                                    <span class="currency-flag">🇱🇾</span>
+                                    <span>الدينار الليبي</span>
+                                </div>
+                            </td>
+                            <td><strong>LYD</strong></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="currency-info">
+                                    <span class="currency-flag">🇺🇸</span>
+                                    <span>الدولار الأمريكي</span>
+                                </div>
+                            </td>
+                            <td><strong>USD</strong></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="currency-info">
+                                    <span class="currency-flag">🇪🇺</span>
+                                    <span>اليورو</span>
+                                </div>
+                            </td>
+                            <td><strong>EUR</strong></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="currency-info">
+                                    <span class="currency-flag">🇬🇧</span>
+                                    <span>الجنيه الإسترليني</span>
+                                </div>
+                            </td>
+                            <td><strong>GBP</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="rates-note">
+                <i class="fas fa-info-circle"></i>
+                <p>للاستفسار عن الأسعار الحالية، يرجى الاتصال بنا أو زيارة فرعنا.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-us" id="why-us">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">لماذا نحن</h2>
+                <p class="section-subtitle">نقدم لك أفضل الخدمات المالية</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="feature-title">الثقة والمصداقية</h3>
+                    <p class="feature-description">
+                        سنوات من الخبرة والثقة المبنية على الشفافية والالتزام بمعايير عالية من الجودة.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3 class="feature-title">الأمان والالتزام القانوني</h3>
+                    <p class="feature-description">
+                        جميع معاملاتنا تتم وفقًا للقوانين والضوابط المعمول بها.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3 class="feature-title">سرعة إنجاز المعاملات</h3>
+                    <p class="feature-description">
+                        فريق محترف وخدمات سريعة لضمان إنجاز معاملاتك في أسرع وقت ممكن.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="feature-title">شفافية الأسعار</h3>
+                    <p class="feature-description">
+                        أسعار واضحة وشفافة بدون رسوم خفية، مما يضمن لك أفضل قيمة مقابل أموالك.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">اتصل بنا</h2>
+                <p class="section-subtitle">نحن هنا لخدمتك</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 class="contact-title">العنوان</h3>
+                        <p class="contact-text">مدينة الزاوية – مجمع الاستثمار – الشركة</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="contact-title">البريد الإلكتروني</h3>
+                        <p class="contact-text">
+                            <a href="mailto:info@wataniyaexchange.com.ly">info@wataniyaexchange.com.ly</a>
+                        </p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3 class="contact-title">الهواتف</h3>
+                        <p class="contact-text">
+                            <a href="tel:2180931480848">0931480848</a><br>
+                            <a href="tel:2180921480848">0921480848</a>
+                        </p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="contact-title">الموقع الإلكتروني</h3>
+                        <p class="contact-text">
+                            <a href="https://www.wataniyaexchange.com.ly" target="_blank" rel="noopener">www.wataniyaexchange.com.ly</a>
+                        </p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/16qfR4DujE/?mibextid=wwXIfr" class="social-link facebook" target="_blank" rel="noopener" aria-label="فيسبوك">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>فيسبوك</span>
+                        </a>
+                        <a href="https://wa.me/2180921480848" class="social-link whatsapp" target="_blank" rel="noopener" aria-label="واتساب">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>واتساب</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <div class="map-wrapper">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.5!2d12.729744!3d32.753845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDQ1JzEzLjgiTiAxMsKwNDMnNDcuMSJF!5e0!3m2!1sar!2sly!4v1699000000000!5m2!1sar!2sly"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="موقع الشركة الوطنية للصرافة - مدينة الزاوية - مجمع الاستثمار">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="شعار الشركة الوطنية للصرافة">
+                </div>
+                <div class="footer-info">
+                    <h4>الشركة الوطنية للصرافة والخدمات المالية المساهمة</h4>
+                    <p class="footer-address">مدينة الزاوية – مجمع الاستثمار – الشركة</p>
+                </div>
+                <div class="footer-links">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#about">من نحن</a></li>
+                        <li><a href="#services">خدماتنا</a></li>
+                        <li><a href="#rates">العملات</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>تواصل معنا</h4>
+                    <p><i class="fas fa-phone"></i> <a href="tel:2180931480848">0931480848</a> / <a href="tel:2180921480848">0921480848</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@wataniyaexchange.com.ly">info@wataniyaexchange.com.ly</a></p>
+                    <p><i class="fas fa-globe"></i> <a href="https://www.wataniyaexchange.com.ly" target="_blank">www.wataniyaexchange.com.ly</a></p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/16qfR4DujE/?mibextid=wwXIfr" class="footer-social-link" target="_blank" rel="noopener" aria-label="فيسبوك">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://wa.me/2180921480848" class="footer-social-link" target="_blank" rel="noopener" aria-label="واتساب">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 الشركة الوطنية للصرافة والخدمات المالية المساهمة. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scroll-top" aria-label="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
