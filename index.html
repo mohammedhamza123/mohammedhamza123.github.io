@@ -1,371 +1,380 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+    <html lang="ar" dir="rtl" id="htmlElement">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="الشركة الوطنية للصرافة والخدمات المالية المساهمة - خدمات صرافة ومالية احترافية منذ 2013">
-    <meta name="keywords" content="صرافة ليبيا, خدمات مالية, تحويلات مالية, أسعار العملات, الزاوية">
-    <meta name="author" content="الشركة الوطنية للصرافة والخدمات المالية">
-    <title>الشركة الوطنية للصرافة والخدمات المالية المساهمة</title>
+    <title>محمد حمزة - مطور Full Stack</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Scroll Progress Bar -->
-    <div class="scroll-progress" id="scroll-progress"></div>
-    
-    <!-- Header -->
-    <header class="header" id="header">
-        <nav class="navbar">
-            <div class="container">
-                <div class="nav-wrapper">
-                    <div class="logo">
-                        <img src="images/logo.png" alt="شعار الشركة الوطنية للصرافة" id="company-logo">
-                    </div>
-                    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="قائمة التنقل">
-                        <i class="fas fa-bars"></i>
-                        <span></span>
-                        <span></span>
-                        <span></span>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">محمد حمزة</div>
+            <ul class="nav-menu">
+                <li><a href="#home" data-i18n="nav.home">الرئيسية</a></li>
+                <li><a href="#about" data-i18n="nav.about">نبذة</a></li>
+                <li><a href="#education" data-i18n="nav.education">التعليم</a></li>
+                <li><a href="#experience" data-i18n="nav.experience">الخبرات</a></li>
+                <li><a href="#skills" data-i18n="nav.skills">المهارات</a></li>
+                <li><a href="#achievements" data-i18n="nav.achievements">الإنجازات</a></li>
+                <li><a href="#certificates" data-i18n="nav.certificates">الشهادات</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">التواصل</a></li>
+                <li class="nav-lang-item">
+                    <button class="lang-toggle" id="langToggle" aria-label="تبديل اللغة">
+                        <span class="lang-text" data-lang="ar">ع</span>
+                        <span class="lang-text" data-lang="en">EN</span>
                     </button>
-                    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
-                    <ul class="nav-menu" id="nav-menu">
-                        <li><a href="#home" class="nav-link active">الرئيسية</a></li>
-                        <li><a href="#about" class="nav-link">من نحن</a></li>
-                        <li><a href="#services" class="nav-link">خدماتنا</a></li>
-                        <li><a href="#rates" class="nav-link">العملات</a></li>
-                        <li><a href="#why-us" class="nav-link">لماذا نحن</a></li>
-                        <li><a href="#contact" class="nav-link">اتصل بنا</a></li>
-                    </ul>
-                </div>
+                </li>
+                <li class="nav-theme-item">
+                    <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع الليلي">
+                        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-slideshow">
-            <div class="hero-slide active" style="background-image: url('images/IMG_7268.JPG');">
-                <div class="slide-overlay"></div>
-            </div>
-            <div class="hero-slide" style="background-image: url('images/IMG_7269.JPG');">
-                <div class="slide-overlay"></div>
-            </div>
-            <div class="hero-slide" style="background-image: url('images/IMG_7270.JPG');">
-                <div class="slide-overlay"></div>
-            </div>
-            <div class="hero-slide" style="background-image: url('images/IMG_7271.JPG');">
-                <div class="slide-overlay"></div>
-            </div>
-        </div>
-        <div class="hero-overlay"></div>
+    <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-logo">
-                    <img src="images/logo.png" alt="شعار الشركة الوطنية للصرافة">
-                </div>
-                <h1 class="hero-title">الشركة الوطنية للصرافة<br>والخدمات المالية المساهمة</h1>
-                <p class="hero-subtitle">شركتك الموثوقة للخدمات المالية والصرافة منذ 2013</p>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">تواصل معنا</a>
-                    <a href="#services" class="btn btn-secondary">خدماتنا</a>
-                    <a href="#rates" class="btn btn-outline">العملات</a>
+                <h1 class="hero-title animated-name" data-i18n="hero.name">م.محمد حمزه</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">مطور Full Stack</p>
+                <p class="hero-description" data-i18n="hero.description">متخصص في بناء تطبيقات الويب والموبايل القابلة للتوسع باستخدام أحدث التقنيات والأدوات البرمجية</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary" data-i18n="hero.contactBtn">تواصل معي</a>
+                    <a href="#certificates" class="btn btn-secondary" data-i18n="hero.certificatesBtn">عرض الشهادات</a>
                 </div>
             </div>
-        </div>
-        <!-- Navigation Arrows -->
-        <button class="hero-nav hero-nav-prev" id="hero-prev" aria-label="الصورة السابقة">
-            <i class="fas fa-chevron-right"></i>
-        </button>
-        <button class="hero-nav hero-nav-next" id="hero-next" aria-label="الصورة التالية">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <!-- Slide Indicators -->
-        <div class="hero-indicators" id="hero-indicators">
-            <button class="hero-indicator active" data-slide="0" aria-label="الصورة 1"></button>
-            <button class="hero-indicator" data-slide="1" aria-label="الصورة 2"></button>
-            <button class="hero-indicator" data-slide="2" aria-label="الصورة 3"></button>
-            <button class="hero-indicator" data-slide="3" aria-label="الصورة 4"></button>
+            <div class="hero-image">
+                <div class="hero-photo-wrapper">
+                    <div class="photo-glow"></div>
+                    <div class="hero-photo-container">
+                        <div class="photo-background"></div>
+                        <img src="IMG_5374.JPG" alt="محمد حمزة" class="hero-photo">
+                        <div class="photo-overlay"></div>
+                        <div class="photo-frame"></div>
+                        <div class="photo-corner-decoration corner-top-left"></div>
+                        <div class="photo-corner-decoration corner-top-right"></div>
+                        <div class="photo-corner-decoration corner-bottom-left"></div>
+                        <div class="photo-corner-decoration corner-bottom-right"></div>
+                    </div>
+                </div>
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- About Us Section -->
-    <section class="about" id="about">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">من نحن</h2>
-                <p class="section-subtitle">شركة رائدة في مجال الصرافة والخدمات المالية</p>
-            </div>
+            <h2 class="section-title" data-i18n="about.title">نبذة عني</h2>
             <div class="about-content">
-                <div class="about-text">
-                    <div class="about-badge">
-                        <span class="year">2013</span>
-                        <span class="label">سنة التأسيس</span>
-                    </div>
-                    <p class="about-description">
-                        تأسست <strong>الشركة الوطنية للصرافة والخدمات المالية المساهمة</strong> في عام 2013، 
-                        وتُعد من أوائل شركات الصرافة في ليبيا. نحن شركة رائدة في مجال الصرافة والخدمات المالية، 
-                        ملتزمون بتقديم خدمات متميزة لعملائنا الكرام.
-                    </p>
-                    <p class="about-description">
-                        نحن نعمل بكل شفافية ومهنية لبناء علاقات طويلة الأمد مع عملائنا، 
-                        مما يضمن أعلى معايير الأمان والشفافية في جميع معاملاتنا.
-                    </p>
+                <p class="about-text" data-i18n="about.text">
+                    مطور Full Stack متخصص في بناء تطبيقات الويب والموبايل القابلة للتوسع باستخدام أحدث التقنيات والأدوات البرمجية. 
+                    لدي خبرة واسعة في تطوير الواجهات الخلفية (Backend) باستخدام FastAPI و PostgreSQL، وتطوير الواجهات الأمامية 
+                    وتطبيقات الموبايل باستخدام Flutter و JavaScript. شغوف بتصميم الهياكل البرمجية النظيفة والأنظمة الآمنة 
+                    والواجهات المستجيبة التي توفر تجربة مستخدم ممتازة. أمتلك مهارات قوية في حل المشكلات المعقدة مع خلفية أكاديمية 
+                    قوية في تقنية المعلومات.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title" data-i18n="education.title">التعليم</h2>
+            <div class="education-card">
+                <div class="education-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
                 </div>
-                <div class="about-image">
-                    <img src="images/IMG_7273.JPG" alt="مكتب الشركة الوطنية للصرافة">
+                <div class="education-content">
+                    <h3 data-i18n="education.degree">بكالوريوس في تقنية المعلومات</h3>
+                    <p class="education-institution">
+                        <a href="https://zu.edu.ly/" target="_blank" rel="noopener noreferrer" class="university-link" data-i18n="education.university">جامعة الزاوية</a>
+                    </p>
+                    <p class="education-period">2019 - 2025</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">خدماتنا</h2>
-                <p class="section-subtitle">خدمات مالية شاملة واحترافية</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-exchange-alt"></i>
-                    </div>
-                    <h3 class="service-title">بيع وشراء العملات الأجنبية</h3>
-                    <p class="service-description">
-                        نقدم خدمات بيع وشراء جميع العملات الأجنبية الرئيسية بأسعار تنافسية وشفافة.
-                    </p>
+            <h2 class="section-title" data-i18n="experience.title">الخبرات العملية</h2>
+            <div class="experience-card">
+                <div class="experience-header">
+                    <h3 data-i18n="experience.position">مطور Full Stack</h3>
+                    <span class="experience-company" data-i18n="experience.company">شركة أساس (Asas Company)</span>
+                    <span class="experience-period" data-i18n="experience.period">2024 - الآن</span>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-wallet"></i>
-                    </div>
-                    <h3 class="service-title">خدمات مخصصات الأغراض الشخصية</h3>
-                    <p class="service-description">
-                        خدمات مالية مخصصة لتلبية احتياجاتك الشخصية وفقًا للضوابط المعمول بها.
-                    </p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3 class="service-title">التحويلات المالية داخل وخارج البلاد</h3>
-                    <p class="service-description">
-                        تحويلات مالية آمنة وسريعة داخل ليبيا وخارجها عبر شبكة موثوقة من الشركاء.
-                    </p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3 class="service-title">التحويلات السريعة</h3>
-                    <p class="service-description">
-                        خدمة تحويلات فورية لضمان وصول أموالك في أسرع وقت ممكن.
-                    </p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3 class="service-title">الخدمات المالية المصرح بها</h3>
-                    <p class="service-description">
-                        جميع خدماتنا تتم وفقًا للقوانين والضوابط المصرح بها ومعتمدة من مصرف ليبيا المركزي.
-                    </p>
-                </div>
-                <div class="service-card">
-                    <div class="service-logo">
-                        <img src="images/moneygram-logo.png" alt="شعار MoneyGram" class="service-logo-img">
-                    </div>
-                    <h3 class="service-title">التحويل عبر MoneyGram</h3>
-                    <p class="service-description">
-                        خدمة تحويلات مالية دولية سريعة وآمنة عبر شبكة MoneyGram العالمية.
+                <div class="experience-content">
+                    <p data-i18n="experience.description">
+                        أعمل كمطور تطبيقات ضمن فريق محترف، حيث أساهم في تطوير حلول الموبايل والواجهات الخلفية القابلة للتوسع. 
+                        أقوم ببناء وصيانة تطبيقات Flutter عالية الجودة، وتطوير واجهات برمجة التطبيقات (RESTful APIs) باستخدام FastAPI، 
+                        وتصميم قواعد بيانات PostgreSQL محسّنة للأداء. أتعاون بنشاط مع الفريق باستخدام Git للتحكم بالإصدارات 
+                        وأساهم في عمليات الاختبار والتصحيح وتحسين الأداء لضمان أنظمة إنتاج عالية الجودة والموثوقية.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Exchange Rates Section -->
-    <section class="rates" id="rates">
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">العملات المتاحة</h2>
-                <p class="section-subtitle">نقدم خدمات بيع وشراء العملات الأجنبية التالية</p>
-            </div>
-            <div class="rates-table-wrapper">
-                <table class="rates-table">
-                    <thead>
-                        <tr>
-                            <th>العملة</th>
-                            <th>الرمز</th>
-                        </tr>
-                    </thead>
-                    <tbody id="rates-tbody">
-                        <tr>
-                            <td>
-                                <div class="currency-info">
-                                    <span class="currency-flag">🇱🇾</span>
-                                    <span>الدينار الليبي</span>
-                                </div>
-                            </td>
-                            <td><strong>LYD</strong></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="currency-info">
-                                    <span class="currency-flag">🇺🇸</span>
-                                    <span>الدولار الأمريكي</span>
-                                </div>
-                            </td>
-                            <td><strong>USD</strong></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="currency-info">
-                                    <span class="currency-flag">🇪🇺</span>
-                                    <span>اليورو</span>
-                                </div>
-                            </td>
-                            <td><strong>EUR</strong></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="currency-info">
-                                    <span class="currency-flag">🇬🇧</span>
-                                    <span>الجنيه الإسترليني</span>
-                                </div>
-                            </td>
-                            <td><strong>GBP</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="rates-note">
-                <i class="fas fa-info-circle"></i>
-                <p>للاستفسار عن الأسعار الحالية، يرجى الاتصال بنا أو زيارة فرعنا.</p>
+            <h2 class="section-title" data-i18n="skills.title">المهارات</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 data-i18n="skills.programming">لغات البرمجة</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Dart</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-i18n="skills.frameworks">الأطر والتقنيات</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">Flutter</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-i18n="skills.databases">قواعد البيانات</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-i18n="skills.tools">الأدوات</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">VS Code</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-i18n="skills.languages">اللغات</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-i18n="skills.arabic">العربية</span>
+                        <span class="skill-tag" data-i18n="skills.english">الإنجليزية</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-us" id="why-us">
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">لماذا نحن</h2>
-                <p class="section-subtitle">نقدم لك أفضل الخدمات المالية</p>
+            <h2 class="section-title" data-i18n="achievements.title">الإنجازات والمسابقات</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                        </svg>
+                    </div>
+                    <div class="achievement-content">
+                        <h3 data-i18n="achievements.icpc.title">مسابقة ICPC - Libyan CPC</h3>
+                        <p class="achievement-description" data-i18n="achievements.icpc.description">شاركت في مسابقة البرمجة التنافسية الدولية ICPC - النسخة الليبية 2024 وحصلت على المركز التاسع</p>
+                        <span class="achievement-rank" data-i18n="achievements.icpc.rank">الترتيب: 9</span>
+                    </div>
+                </div>
+                
+                
             </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-handshake"></i>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <h2 class="section-title" data-i18n="certificates.title">الشهادات</h2>
+            <div class="certificates-grid">
+                <div class="certificate-card">
+                    <div class="certificate-image pdf-certificate" onclick="openModal('2025-ICPC Libyan CPC-Mohammed Hamza-PLACE 2.pdf')">
+                        <object data="2025-ICPC Libyan CPC-Mohammed Hamza-PLACE 2.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" class="pdf-object">
+                            <embed src="2025-ICPC Libyan CPC-Mohammed Hamza-PLACE 2.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" class="pdf-embed">
+                        </object>
+                        <div class="certificate-overlay">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="16"></line>
+                                <line x1="8" y1="12" x2="16" y2="12"></line>
+                            </svg>
+                            <p style="color: white; margin-top: 1rem; font-weight: 600; font-size: 1.1rem;" data-i18n="modal.clickToZoom">انقر للتكبير</p>
+                        </div>
                     </div>
-                    <h3 class="feature-title">الثقة والمصداقية</h3>
-                    <p class="feature-description">
-                        سنوات من الخبرة والثقة المبنية على الشفافية والالتزام بمعايير عالية من الجودة.
-                    </p>
+                    <div class="certificate-info">
+                        <h3 data-i18n="certificates.icpc.title">شهادة إنجاز - مسابقة ICPC</h3>
+                        <p data-i18n="certificates.icpc.description">مسابقة البرمجة التنافسية الدولية ICPC - النسخة الليبية 2024</p>
+                        <p class="certificate-issuer" data-i18n="certificates.icpc.issuer">المركز التاسع - <a href="https://zu.edu.ly/" target="_blank" rel="noopener noreferrer" class="university-link" data-i18n="education.university">جامعة الزاوية</a> (أكتوبر 2024)</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-lock"></i>
+                <div class="certificate-card">
+                    <div class="certificate-image" onclick="openModal('1.jpg')">
+                        <img src="1.jpg" alt="شهادة شكر وتقدير - الترتيب الثاني" loading="lazy">
+                        <div class="certificate-overlay">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="16"></line>
+                                <line x1="8" y1="12" x2="16" y2="12"></line>
+                            </svg>
+                        </div>
                     </div>
-                    <h3 class="feature-title">الأمان والالتزام القانوني</h3>
-                    <p class="feature-description">
-                        جميع معاملاتنا تتم وفقًا للقوانين والضوابط المعمول بها.
-                    </p>
+                    <div class="certificate-info">
+                        <h3 data-i18n="certificates.appreciation.title">شهادة شكر وتقدير</h3>
+                        <p data-i18n="certificates.appreciation.rank2">الترتيب الثاني على مستوى قسم تقنيات الحاسوب - الفصل الدراسي خريف 2024-2025</p>
+                        <p class="certificate-issuer"><a href="https://zu.edu.ly/" target="_blank" rel="noopener noreferrer" class="university-link" data-i18n="education.university">جامعة الزاوية</a> - <span data-i18n="certificates.appreciation.faculty">كلية تقنية المعلومات</span></p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-tachometer-alt"></i>
+                <div class="certificate-card">
+                    <div class="certificate-image" onclick="openModal('3.jpg')">
+                        <img src="3.jpg" alt="شهادة شكر وتقدير - اليوم الوطني لتقنية المعلومات 2025" loading="lazy">
+                        <div class="certificate-overlay">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="16"></line>
+                                <line x1="8" y1="12" x2="16" y2="12"></line>
+                            </svg>
+                        </div>
                     </div>
-                    <h3 class="feature-title">سرعة إنجاز المعاملات</h3>
-                    <p class="feature-description">
-                        فريق محترف وخدمات سريعة لضمان إنجاز معاملاتك في أسرع وقت ممكن.
-                    </p>
+                    <div class="certificate-info">
+                        <h3 data-i18n="certificates.appreciation.title">شهادة شكر وتقدير</h3>
+                        <p data-i18n="certificates.ntd.2025">التعاون في فعاليات اليوم الوطني لتقنية المعلومات - مدينة الزاوية</p>
+                        <p class="certificate-issuer">2025</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-eye"></i>
+                <div class="certificate-card">
+                    <div class="certificate-image" onclick="openModal('2.jpg')">
+                        <img src="2.jpg" alt="شهادة شكر وتقدير - اليوم الوطني لتقنية المعلومات 2024" loading="lazy">
+                        <div class="certificate-overlay">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="16"></line>
+                                <line x1="8" y1="12" x2="16" y2="12"></line>
+                            </svg>
+                        </div>
                     </div>
-                    <h3 class="feature-title">شفافية الأسعار</h3>
-                    <p class="feature-description">
-                        أسعار واضحة وشفافة بدون رسوم خفية، مما يضمن لك أفضل قيمة مقابل أموالك.
-                    </p>
+                    <div class="certificate-info">
+                        <h3 data-i18n="certificates.appreciation.title">شهادة شكر وتقدير</h3>
+                        <p data-i18n="certificates.ntd.2024">التعاون في فعاليات اليوم الوطني لتقنية المعلومات - مدينة الزاوية</p>
+                        <p class="certificate-issuer">2024</p>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <div class="certificate-image" onclick="openModal('5.jpg')">
+                        <img src="5.jpg" alt="شهادة مشاركة - الإسعافات الأولية" loading="lazy">
+                        <div class="certificate-overlay">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="16"></line>
+                                <line x1="8" y1="12" x2="16" y2="12"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 data-i18n="certificates.participation.title">شهادة مشاركة</h3>
+                        <p data-i18n="certificates.participation.firstaid">دورة تدريبية في الإسعافات الأولية</p>
+                        <p class="certificate-issuer" data-i18n="certificates.participation.redcrescent">الهلال الأحمر الليبي - فرع الزاوية (2018)</p>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <div class="certificate-image" onclick="openModal('4.jpg')">
+                        <img src="4.jpg" alt="شهادة حضور - إنترنت الأشياء" loading="lazy">
+                        <div class="certificate-overlay">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="16"></line>
+                                <line x1="8" y1="12" x2="16" y2="12"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 data-i18n="certificates.attendance.title">شهادة حضور</h3>
+                        <p data-i18n="certificates.attendance.iot">دورة تدريبية في إنترنت الأشياء (IoT) - 16 ساعة تدريبية</p>
+                        <p class="certificate-issuer"><a href="https://zu.edu.ly/" target="_blank" rel="noopener noreferrer" class="university-link" data-i18n="education.university">جامعة الزاوية</a> - <span data-i18n="certificates.attendance.center">مركز تنمية وتطوير الموارد البشرية</span> (2022)</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Certificate Modal -->
+    <div id="certificateModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage" src="" alt="شهادة">
+        <div class="modal-caption" id="modalCaption"></div>
+    </div>
 
     <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <section id="contact" class="contact">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">اتصل بنا</h2>
-                <p class="section-subtitle">نحن هنا لخدمتك</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h3 class="contact-title">العنوان</h3>
-                        <p class="contact-text">مدينة الزاوية – مجمع الاستثمار – الشركة</p>
+            <h2 class="section-title" data-i18n="contact.title">التواصل</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
                     </div>
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h3 class="contact-title">البريد الإلكتروني</h3>
-                        <p class="contact-text">
-                            <a href="mailto:info@wataniyaexchange.com.ly">info@wataniyaexchange.com.ly</a>
-                        </p>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <h3 class="contact-title">الهواتف</h3>
-                        <p class="contact-text">
-                            <a href="tel:2180931480848">0931480848</a><br>
-                            <a href="tel:2180921480848">0921480848</a>
-                        </p>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <h3 class="contact-title">الموقع الإلكتروني</h3>
-                        <p class="contact-text">
-                            <a href="https://www.wataniyaexchange.com.ly" target="_blank" rel="noopener">www.wataniyaexchange.com.ly</a>
-                        </p>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/share/16qfR4DujE/?mibextid=wwXIfr" class="social-link facebook" target="_blank" rel="noopener" aria-label="فيسبوك">
-                            <i class="fab fa-facebook-f"></i>
-                            <span>فيسبوك</span>
-                        </a>
-                        <a href="https://wa.me/2180921480848" class="social-link whatsapp" target="_blank" rel="noopener" aria-label="واتساب">
-                            <i class="fab fa-whatsapp"></i>
-                            <span>واتساب</span>
-                        </a>
-                    </div>
+                    <h3 data-i18n="contact.phone">الهاتف</h3>
+                    <p>+0945928149</p>
+                    
                 </div>
-                <div class="contact-map">
-                    <div class="map-wrapper">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.5!2d12.729744!3d32.753845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDQ1JzEzLjgiTiAxMsKwNDMnNDcuMSJF!5e0!3m2!1sar!2sly!4v1699000000000!5m2!1sar!2sly"
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="موقع الشركة الوطنية للصرافة - مدينة الزاوية - مجمع الاستثمار">
-                        </iframe>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
                     </div>
+                    <h3 data-i18n="contact.email">البريد الإلكتروني</h3>
+                    <p>hmzh23102@gmail.com</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="contact.address">العنوان</h3>
+                    <p data-i18n="contact.location">ليبيا - الزاوية</p>
                 </div>
             </div>
         </div>
@@ -374,51 +383,11 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="images/logo.png" alt="شعار الشركة الوطنية للصرافة">
-                </div>
-                <div class="footer-info">
-                    <h4>الشركة الوطنية للصرافة والخدمات المالية المساهمة</h4>
-                    <p class="footer-address">مدينة الزاوية – مجمع الاستثمار – الشركة</p>
-                </div>
-                <div class="footer-links">
-                    <h4>روابط سريعة</h4>
-                    <ul>
-                        <li><a href="#home">الرئيسية</a></li>
-                        <li><a href="#about">من نحن</a></li>
-                        <li><a href="#services">خدماتنا</a></li>
-                        <li><a href="#rates">العملات</a></li>
-                        <li><a href="#contact">اتصل بنا</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>تواصل معنا</h4>
-                    <p><i class="fas fa-phone"></i> <a href="tel:2180931480848">0931480848</a> / <a href="tel:2180921480848">0921480848</a></p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@wataniyaexchange.com.ly">info@wataniyaexchange.com.ly</a></p>
-                    <p><i class="fas fa-globe"></i> <a href="https://www.wataniyaexchange.com.ly" target="_blank">www.wataniyaexchange.com.ly</a></p>
-                    <div class="footer-social">
-                        <a href="https://www.facebook.com/share/16qfR4DujE/?mibextid=wwXIfr" class="footer-social-link" target="_blank" rel="noopener" aria-label="فيسبوك">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://wa.me/2180921480848" class="footer-social-link" target="_blank" rel="noopener" aria-label="واتساب">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 الشركة الوطنية للصرافة والخدمات المالية المساهمة. جميع الحقوق محفوظة.</p>
-            </div>
+            <p>&copy; 2026 <span data-i18n="footer.name">محمد حمزة</span>. <span data-i18n="footer.rights">جميع الحقوق محفوظة</span>.</p>
         </div>
     </footer>
 
-    <!-- Scroll to Top Button -->
-    <button class="scroll-top" id="scroll-top" aria-label="العودة للأعلى">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
-
