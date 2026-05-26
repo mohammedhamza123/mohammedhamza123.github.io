@@ -57,7 +57,8 @@ const translations = {
             icpc: {
                 title: "شهادة إنجاز - مسابقة ICPC",
                 description: "مسابقة البرمجة التنافسية الدولية ICPC - النسخة الليبية 2024",
-                issuer: "المركز التاسع - جامعة الزاوية (أكتوبر 2024)"
+                issuer: "المركز التاسع -",
+                date: "(أكتوبر 2024)"
             },
             appreciation: {
                 title: "شهادة شكر وتقدير",
@@ -151,7 +152,8 @@ const translations = {
             icpc: {
                 title: "Achievement Certificate - ICPC Competition",
                 description: "International Collegiate Programming Contest ICPC - Libyan edition 2024",
-                issuer: "9th Place - University of Zawia (October 2024)"
+                issuer: "9th Place -",
+                date: "(October 2024)"
             },
             appreciation: {
                 title: "Certificate of Appreciation",

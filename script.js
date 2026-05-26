@@ -88,6 +88,9 @@ function updateLanguage() {
                 element.placeholder = translation;
             } else if (element.hasAttribute('alt')) {
                 element.setAttribute('alt', translation);
+            } else if (element.querySelector('a, span, svg, img, object, embed')) {
+                // Keep nested markup (links, icons, etc.)
+                return;
             } else {
                 element.textContent = translation;
             }
@@ -170,25 +173,38 @@ const observerOptions = {
     rootMargin: '0px 0px -100px 0px'
 };
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-            setTimeout(() => {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }, index * 100);
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
+// Fade-in sections with IntersectionObserver (with fallback)
+const fadeElements = document.querySelectorAll('.education-card, .experience-card, .skill-category, .achievement-card, .certificate-card, .contact-card, .about-text');
 
-// Observe all cards and sections
-document.querySelectorAll('.education-card, .experience-card, .skill-category, .achievement-card, .certificate-card, .contact-card, .about-text').forEach((el, index) => {
+function revealElement(el) {
+    el.style.opacity = '1';
+    el.style.transform = 'translateY(0)';
+}
+
+fadeElements.forEach((el) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(40px)';
     el.style.transition = 'opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
-    observer.observe(el);
 });
+
+if ('IntersectionObserver' in window) {
+    fadeElements.forEach((el, index) => {
+        const elObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => revealElement(entry.target), index * 100);
+                    elObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        elObserver.observe(el);
+    });
+} else {
+    fadeElements.forEach(revealElement);
+}
+
+// Failsafe: show content if observer does not trigger
+setTimeout(() => fadeElements.forEach(revealElement), 2500);
 
 // Add active class to current section in navigation with smooth transitions
 const sections = document.querySelectorAll('section[id]');
@@ -223,14 +239,15 @@ function openModal(imageSrc) {
     const modal = document.getElementById('certificateModal');
     const modalImg = document.getElementById('modalImage');
     const caption = document.getElementById('modalCaption');
+    const assetSrc = imageSrc.startsWith('/') ? imageSrc : `/${imageSrc}`;
     
     modal.style.display = 'block';
     
     // Check if it's a PDF file
-    if (imageSrc.endsWith('.pdf')) {
+    if (assetSrc.endsWith('.pdf')) {
         modalImg.style.display = 'none';
         const pdfFrame = document.createElement('iframe');
-        pdfFrame.src = imageSrc;
+        pdfFrame.src = assetSrc;
         pdfFrame.style.width = '90%';
         pdfFrame.style.maxWidth = '1400px';
         pdfFrame.style.height = '90vh';
@@ -256,7 +273,7 @@ function openModal(imageSrc) {
             existingFrame.remove();
         }
         modalImg.style.display = 'block';
-        modalImg.src = imageSrc;
+        modalImg.src = assetSrc;
         caption.textContent = 'انقر خارج الصورة أو اضغط ESC للإغلاق';
     }
     
